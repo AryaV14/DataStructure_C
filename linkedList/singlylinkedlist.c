@@ -10,7 +10,7 @@ typedef struct list{
 void display(node *header)
 {
     node *ptr;
-    ptr=(node *)malloc(sizeof(node));
+    //ptr=(node *)malloc(sizeof(node));
     ptr=header->link;
     while(ptr!=NULL)
         {
@@ -35,7 +35,7 @@ void insertEnd(node *header,int item)
     node *ptr, *new;
     new=(node *)malloc(sizeof(node));
     ptr=(node *)malloc(sizeof(node));
-    ptr=header->link;
+    ptr=header;
     while(ptr->link!=NULL)
         {
             ptr=ptr->link;
@@ -45,6 +45,7 @@ void insertEnd(node *header,int item)
     ptr->link=new;
 }
 
+//insertion at end is possible with key but not at front
 
 void insert(node *header,int item,int key)
 {   
@@ -79,6 +80,7 @@ void deleteEnd(node *header)
 {
     node *ptr, *ptr1;
     ptr=header->link;
+    ptr1=header;
     if(ptr==NULL)
         printf("List is Empty\n");
     else{
@@ -91,7 +93,7 @@ void deleteEnd(node *header)
     }
 }
 
-
+//deletion at end is possible with key buut not at front
 
 void delete(node *header,int key)
 {
