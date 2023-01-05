@@ -53,8 +53,8 @@ void insert(node *header,int item,int key)
     node *ptr, *new;
     new=(node *)malloc(sizeof(node));
     ptr=(node *)malloc(sizeof(node));
-    ptr=header->link;
-    count++;
+    ptr=header;
+   
     while(ptr!=NULL&&count!=key-1)
        {    
           ptr=ptr->link; 
