@@ -45,7 +45,7 @@ void insertEnd(node *header,int item)
     ptr->link=new;
 }
 
-//insertion at end is possible with key but not at front
+
 
 void insert(node *header,int item,int key)
 {   
