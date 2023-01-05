@@ -93,13 +93,14 @@ void deleteEnd(node *header)
     }
 }
 
-//deletion at end is possible with key buut not at front
+
 
 void delete(node *header,int key)
 {
     int count=0;
     node *ptr, *ptr1;
     ptr=header->link;
+    ptr1=header;
     count++;
     if(ptr==NULL)
         printf("List is Empty\n");
